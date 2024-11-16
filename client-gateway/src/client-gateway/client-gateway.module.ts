@@ -24,7 +24,7 @@ import { ConfigModule } from '@nestjs/config';
         },
       },
     ]),
-    ConfigModule.forRoot(),  // Cargar el archivo .env
+    ConfigModule.forRoot(), 
   ],
   controllers: [ClientGatewayController],
   providers: [ClientGatewayService],

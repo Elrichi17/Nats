@@ -6,8 +6,8 @@ import * as process from 'process';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),  // Cargar el archivo .env
-    ClientGatewayModule,     // Módulo de Client Gateway
+    ConfigModule.forRoot(),  
+    ClientGatewayModule,   
   ],
   controllers: [],
   providers: [],
@@ -20,7 +20,7 @@ export class AppModule {
       transport: Transport.NATS,
       options: {
         url: process.env.NATS_URL,
-        queue: process.env.BOOKING_SERVICE_QUEUE,  // Si quieres especificar un tipo de cola
+        queue: process.env.BOOKING_SERVICE_QUEUE, 
       },
     };
   }

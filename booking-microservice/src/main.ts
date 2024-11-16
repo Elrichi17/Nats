@@ -8,7 +8,7 @@ async function bootstrap() {
   app.connectMicroservice({
     transport: Transport.NATS,
     options: {
-      url: 'nats://localhost:4222',  // Or your NATS server URL
+      url: 'nats://localhost:4222', 
     },
   });
 

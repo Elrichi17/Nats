@@ -5,13 +5,13 @@ import { CreateOrderingDto } from './dto/create-ordering.dto';
 import { UpdateOrderingDto } from './dto/update-ordering.dto';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
-@ApiTags('orders') // Etiqueta para organizar las rutas en Swagger
+@ApiTags('orders')
 @Controller()
 export class OrderingController {
   constructor(private readonly orderingService: OrderingService) {}
 
-  @ApiOperation({ summary: 'Create a new ordering' }) // Descripción de la operación
-  @ApiResponse({ status: 201, description: 'The ordering has been successfully created.' }) // Respuesta de éxito
+  @ApiOperation({ summary: 'Create a new ordering' }) 
+  @ApiResponse({ status: 201, description: 'The ordering has been successfully created.' }) 
   @MessagePattern('createOrdering')
   create(@Payload() createOrderingDto: CreateOrderingDto) {
     return this.orderingService.create(createOrderingDto);
